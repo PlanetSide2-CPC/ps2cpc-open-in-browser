@@ -5,6 +5,18 @@
     <link rel="stylesheet" href="index.css">
     <title>请在浏览器打开此页面</title>
 </head>
+<script>
+    const url = document.location.toString()
+    const urlRedirectLink = url.slice(url.indexOf('=') + 1);
+
+    const userAgentLower = navigator.userAgent.toLowerCase()
+    const isQQ = userAgentLower.indexOf("qq") !== -1;
+    const isWeixin = userAgentLower.indexOf("micromessenger") !== -1;
+
+    if (!(isQQ || isWeixin)) {
+        location.href = urlRedirectLink
+    }
+</script>
 <body>
 <div class="shadow-layer">
     <p class="title">检测到您使用应用内置浏览器</p>
