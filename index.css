@@ -1,8 +1,10 @@
 body {
     margin: 0 auto;
     padding: 0;
-    background-image: url("background-mobile.png");
-    background-size: 150vh;
+    background-color: #00DB9D;
+    background-image: url("background-logo.png");
+    background-repeat: repeat;
+    background-size: 100vh auto;
 }
 
 p {
